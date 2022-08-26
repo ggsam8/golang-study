@@ -14,24 +14,41 @@ Create a file firstGoInKubernetes.go with the following content. This is a simpl
 Go
 
 1 package main
+
 2
 
 3 import (
+
 4    "fmt"
+
 5    "log"
+
 6    "net/http"
+
 7)
+
 8
+
 9 func main() {
+
 10    http.HandleFunc("/", handlerFunc)
+
 11    log.Fatal(http.ListenAndServe("0.0.0.0:9090", nil))
+
 12}
+
 13
+
 14 func handlerFunc(w http.ResponseWriter, r *http.Request) {
+
 15    log.Printf("Ping from %s", r.RemoteAddr)
+
 16    fmt.Fprintln(w, "Hello, WebServer is listening on  9090")
+
 17
+
 18}
+
 19
 
 Step 2
