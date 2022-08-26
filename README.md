@@ -15,6 +15,7 @@ Go
 
 1 package main
 2
+
 3 import (
 4    "fmt"
 5    "log"
